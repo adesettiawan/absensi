@@ -1,7 +1,7 @@
 <?php
-defined('BASEPATH') OR die('No direct script access allowed!');
+defined('BASEPATH') or die('No direct script access allowed!');
 
-class Absensi_model extends CI_Model 
+class Absensi_model extends CI_Model
 {
     public function get_absen($id_user, $bulan, $tahun)
     {
@@ -9,7 +9,7 @@ class Absensi_model extends CI_Model
         $this->db->where('id_user', $id_user);
         $this->db->where("DATE_FORMAT(tgl, '%m') = ", $bulan);
         $this->db->where("DATE_FORMAT(tgl, '%Y') = ", $tahun);
-        $this->db->group_by("tgl");
+        $this->db->group_by();
         $result = $this->db->get('absensi a');
         return $result->result_array();
     }

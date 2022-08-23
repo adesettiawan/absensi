@@ -1,2 +1,2 @@
 # absen-pegawai
-Aplikasi Absen Pegawai
+Aplikasi Absen Pegawai.
